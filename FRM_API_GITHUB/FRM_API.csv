@@ -1,0 +1,5 @@
+Type,Name,Left,Top,Width,Height
+Form,frmCommand ,0,0,19110,11370
+CommandButton,cmdLogs ,7800,9120,1000,700
+TextBox,txtError ,14640,1200,4335,825
+TextBox,memConvert ,10200,9960,1000,340

@@ -1,0 +1,29 @@
+LRESULT CALLBACK WndProc(HWND hwnd, UINT umsg, WPARAM wParam, LPARAM lParam) {
+    switch (umsg) {
+        case WM_DESTROY: PostQuitMessage(0); return 0;
+        //add other cases here
+    }
+    return DefWindowProc(hwnd, umsg, wParam, lParam);
+}
+
+int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow) {
+    WNDCLASSW wc = {};
+    wc.lpfnWndProc = WndProc;
+    wc.hInstance = hInstance;
+    wc.lpszClassName = L"GuiWindow";
+    if (!RegisterClassW(&wc)) return 0;
+
+    RECT adjR = {0, 0,1911, 1137};
+    AdjustWindowRectEx(&adjR, WS_OVERLAPPEDWINDOW, FALSE, 0);
+    int finalW = adjR.right - adjR.left; int finalH = adjR.bottom - adjR.top;
+    HWND hwnd = CreateWindowExW(0, L"GuiWindow", L"Converted Window", WS_OVERLAPPEDWINDOW, 0, 0, finalW, finalH, NULL, NULL, hInstance, NULL);
+    if (!hwnd) return 0; ShowWindow(hwnd, nCmdShow); UpdateWindow(hwnd);
+
+    HWND hwndcmdLogs  = CreateWindowExW(0,WC_BUTTON, L"", WS_CHILD | WS_VISIBLE, 780, 912, 100, 70, hwnd, (HMENU)IDC_BUTTON_cmdLogs , hInstance, NULL);
+    HWND hwndtxtError  = CreateWindowExW(0,WC_EDIT, L"", WS_CHILD | WS_VISIBLE, 1464, 120, 433, 82, hwnd, (HMENU)IDC_TEXT_txtError , hInstance, NULL);
+    HWND hwndmemConvert  = CreateWindowExW(0,WC_EDIT, L"", WS_CHILD | WS_VISIBLE, 1020, 996, 100, 34, hwnd, (HMENU)IDC_TEXT_memConvert , hInstance, NULL);
+
+    MSG msg = {};
+    while (GetMessage(&msg, NULL, 0, 0)) {TranslateMessage(&msg); DispatchMessage(&msg); }
+    return (int)msg.wParam;
+}
