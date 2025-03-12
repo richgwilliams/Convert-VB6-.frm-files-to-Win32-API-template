@@ -56,6 +56,18 @@ After running the converter, you will find two output files in the project's roo
         return (int)msg.wParam;
     }
 
+
 **Notes:**
 
 The program is especially useful for converting VB6 `.frm` files that represent a main window with many controls. Sometimes the relationship between VB6 screen units (twips, pixels, user etc) can be a consideration. The program divides the VB6 unit by 10. If you wish, reading the .csv file into Excel allows you to study the control dimensions and maybe make numeric alterations later on. The generated code is a template, error handling and other features will need to be edited and added as you develop your new C++ program.
+
+
+**Limitations:**
+
+* This tool provides a foundational conversion of VB6 form layouts.
+* Support for VB6 controls and properties is limited.
+* The generated C++ code serves as a template and requires manual adjustments for full functionality and desired aesthetics.
+* This tool is intended as a starting point, empowering developers to build upon the generated code for their specific needs.
+
+
+
