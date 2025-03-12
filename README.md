@@ -70,4 +70,7 @@ The program is especially useful for converting VB6 `.frm` files that represent 
 * This tool is intended as a starting point, empowering developers to build upon the generated code for their specific needs.
 
 
+**Acknowledgments:**
+
+The author acknowledges the assistance of the Gemini and ChatGPT large language models as co-authors, also Gemini for the refining of the README.md and improving the clarity of the project description. These large language AI models are considered by the author as essential for the understanding of Win32 API and C++ programming
 
