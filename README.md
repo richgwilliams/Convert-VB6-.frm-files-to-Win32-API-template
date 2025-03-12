@@ -74,3 +74,7 @@ The program is especially useful for converting VB6 `.frm` files that represent 
 
 The author acknowledges the assistance of the Gemini and ChatGPT large language models as co-authors, also Gemini for the refining of the README.md and improving the clarity of the project description. The author considers these Large Language Models (LLMs) essential for the understanding of Win32 API and C++ programming.
 
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
