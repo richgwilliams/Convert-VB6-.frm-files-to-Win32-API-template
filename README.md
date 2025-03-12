@@ -58,4 +58,4 @@ After running the converter, you will find two output files in the project's roo
 
 **Notes:**
 
-The program is especially useful for converting VB6 `.frm` files that represent a main window with many controls. Sometimes the relationship between VB6 screen units (twips, pixels, user etc) can be a consideration. The program divides the VB6 unit by 10. If you wish reading the .csv file into Excel allows you to study the control dimensions and maybe make numeric alterations later on. The generated code is a template, error handling and other features will need to be edited and added as you develop your new C++ program.
+The program is especially useful for converting VB6 `.frm` files that represent a main window with many controls. Sometimes the relationship between VB6 screen units (twips, pixels, user etc) can be a consideration. The program divides the VB6 unit by 10. If you wish, reading the .csv file into Excel allows you to study the control dimensions and maybe make numeric alterations later on. The generated code is a template, error handling and other features will need to be edited and added as you develop your new C++ program.
